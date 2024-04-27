@@ -4,10 +4,10 @@
 Este documento detalla el proceso y estructura para la ingesta de datos desde SAP a SQL Server, enfocándose en productos, ventas, vendedores, y ciudades.
 
 ## Flujo de datos sobre la ingesta
-![Diagrama DFLOW](https://github.com/jmorejonm/ETLSAP/blob/main/diagDataFlow.png)
+![Diagrama DFLOW](https://github.com/jose-dev-gt/ETLSAP/blob/main/diagDataFlow.png)
 
 ## Estructuras de Tabla
-![Diagrama ER](https://github.com/jmorejonm/ETLSAP/blob/main/diagERSAP.png)
+![Diagrama ER](https://github.com/jose-dev-gt/ETLSAP/blob/main/diagERSAP.png)
 ### 1. Tabla de Productos
 ```sql
 CREATE TABLE Productos (
@@ -98,7 +98,7 @@ GO
 ```
 
 ## Modelo Estrella
-![Diagrama ETL](https://github.com/jmorejonm/ETLSAP/blob/main/diagSTARSAP.png)
+![Diagrama ETL](https://github.com/jose-dev-gt/ETLSAP/blob/main/diagSTARSAP.png)
 El diseño del almacén de datos utiliza un modelo estrella para análisis.
 ```sql
 -- Fact Table for Sales
@@ -146,7 +146,7 @@ CREATE TABLE DimCiudades (
 );
 ```
 ## Copy Data entre diferentes servers
-![Diagrama COPYDATA](https://github.com/jmorejonm/ETLSAP/blob/main/diagCOPYDATA.png)
+![Diagrama COPYDATA](https://github.com/jose-dev-gt/ETLSAP/blob/main/diagCOPYDATA.png)
 
 Para la comunicacion entre bases de datos entre diferentes servidores en el mismo dominio, se debe de crear Linked Server, dejo un ejemplo de comunicación
 
